@@ -16,7 +16,7 @@ from .analysis import decoder_sharpness, sparsity_report
 from .model import GatedSAE
 from .schedules import WarmupCosineDecay
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 __all__ = [
     "GatedSAE",

@@ -3,11 +3,22 @@ name: Publish to PyPI
 on:
   release:
     types: [published]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Index to publish to (use testpypi for a dry run)"
+        type: choice
+        options:
+          - testpypi
+          - pypi
+        default: testpypi
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    environment: pypi
+    # Release events always go to the 'pypi' environment; manual runs use the
+    # selected target so TestPyPI Trusted Publishing can use its own environment.
+    environment: ${{ (github.event_name == 'workflow_dispatch' && inputs.target == 'testpypi') && 'testpypi' || 'pypi' }}
     permissions:
       id-token: write  # required for PyPI Trusted Publishing (OIDC)
     steps:
@@ -23,5 +34,12 @@ jobs:
           python -m pip install --upgrade build
           python -m build
 
+      - name: Publish to TestPyPI (dry run)
+        if: github.event_name == 'workflow_dispatch' && inputs.target == 'testpypi'
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
       - name: Publish to PyPI
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.target == 'pypi')
         uses: pypa/gh-action-pypi-publish@release/v1

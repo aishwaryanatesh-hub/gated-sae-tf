@@ -11,9 +11,9 @@ training recipe (warmup→cosine LR, gradient clipping, decoder normalization,
 auxiliary loss) and the interpretability tooling (sparsity stats, decoder
 sharpness, feature galleries) packaged for reuse.
 
-![Gated SAE overview](assets/gated_sae_overview.png)
+![Gated SAE overview](https://raw.githubusercontent.com/aishwaryanatesh-hub/gated-sae-tf/main/assets/gated_sae_overview.png)
 
-![Gated SAE architecture](assets/gated_sae_architecture.png)
+![Gated SAE architecture](https://raw.githubusercontent.com/aishwaryanatesh-hub/gated-sae-tf/main/assets/gated_sae_architecture.png)
 
 ## What is a sparse gated autoencoder?
 
