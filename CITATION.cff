@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "gated-sae-tf: A TensorFlow/Keras Sparse Gated Autoencoder"
+authors:
+  - family-names: Natesh
+    given-names: Aishwarya
+version: 0.1.0
+date-released: 2026-01-01
+license: MIT
+repository-code: "https://github.com/aishwaryanatesh-hub/gated-sae-tf"
+keywords:
+  - sparse-autoencoder
+  - gated-sae
+  - interpretability
+  - tensorflow
+  - keras
+references:
+  - type: article
+    title: "Improving Dictionary Learning with Gated Sparse Autoencoders"
+    authors:
+      - family-names: Rajamanoharan
+        given-names: Senthooran
+      - family-names: Conmy
+        given-names: Arthur
+      - family-names: Lieberum
+        given-names: Tom
+      - family-names: Varma
+        given-names: Vikrant
+      - family-names: Kramár
+        given-names: János
+      - family-names: Shah
+        given-names: Rohin
+      - family-names: Nanda
+        given-names: Neel
+    year: 2024
+    url: "https://arxiv.org/abs/2404.16014"
+  - type: article
+    title: "Scaling Monosemanticity: Extracting Interpretable Features from Claude 3 Sonnet"
+    authors:
+      - family-names: Templeton
+        given-names: Adly
+      - family-names: Conerly
+        given-names: Tom
+      - family-names: Marcus
+        given-names: Jonathan
+      - family-names: Lindsey
+        given-names: Jack
+      - family-names: Bricken
+        given-names: Trenton
+      - family-names: Chen
+        given-names: Brian
+      - family-names: Pearce
+        given-names: Adam
+      - family-names: Citro
+        given-names: Craig
+      - family-names: Ameisen
+        given-names: Emmanuel
+      - family-names: Jones
+        given-names: Andy
+      - family-names: Cunningham
+        given-names: Hoagy
+      - family-names: Turner
+        given-names: Nicholas L.
+      - family-names: McDougall
+        given-names: Callum
+      - family-names: MacDiarmid
+        given-names: Monte
+      - family-names: Freeman
+        given-names: C. Daniel
+      - family-names: Sumers
+        given-names: Theodore R.
+      - family-names: Rees
+        given-names: Edward
+      - family-names: Batson
+        given-names: Joshua
+      - family-names: Jermyn
+        given-names: Adam
+      - family-names: Carter
+        given-names: Shan
+      - family-names: Olah
+        given-names: Chris
+      - family-names: Henighan
+        given-names: Tom
+    year: 2024
+    url: "https://transformer-circuits.pub/2024/scaling-monosemanticity/index.html"

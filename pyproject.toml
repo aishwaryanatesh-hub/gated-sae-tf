@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gated-sae-tf"
+dynamic = ["version"]
+description = "A TensorFlow/Keras Sparse Gated Autoencoder (Gated SAE) for dictionary learning and interpretability."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Aishwarya Natesh" }]
+keywords = [
+    "sparse-autoencoder",
+    "gated-sae",
+    "interpretability",
+    "mechanistic-interpretability",
+    "dictionary-learning",
+    "tensorflow",
+    "keras",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "keras>=3",
+    "tensorflow>=2.16",
+    "numpy",
+]
+
+[project.optional-dependencies]
+viz = ["matplotlib"]
+dev = ["pytest", "jupyter", "matplotlib"]
+
+[project.urls]
+Homepage = "https://github.com/aishwaryanatesh-hub/gated-sae-tf"
+Repository = "https://github.com/aishwaryanatesh-hub/gated-sae-tf"
+Issues = "https://github.com/aishwaryanatesh-hub/gated-sae-tf/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.dynamic]
+version = { attr = "gated_sae.__version__" }
